@@ -1,0 +1,65 @@
+# 1. ValueError
+num = int("abc")
+# Output:
+# ValueError: invalid literal for int() with base 10: 'abc'
+
+
+# 2. TypeError
+a = "10"
+b = 5
+c = a + b
+# Output:
+# TypeError: can only concatenate str (not "int") to str
+
+
+# 3. NameError
+print(student)
+# Output:
+# NameError: name 'student' is not defined
+
+
+# 4. IndexError
+numbers = [10, 20, 30]
+print(numbers[5])
+# Output:
+# IndexError: list index out of range
+
+
+# 5. KeyError
+student = {"name": "Ankith"}
+print(student["age"])
+# Output:
+# KeyError: 'age'
+
+
+# 6. ZeroDivisionError
+x = 10
+y = 0
+result = x / y
+# Output:
+# ZeroDivisionError: division by zero
+
+
+# 7. FileNotFoundError
+file = open("data.txt", "r")
+# Output:
+# FileNotFoundError: [Errno 2] No such file or directory: 'data.txt'
+
+
+# 8. AttributeError
+num = 10
+num.append(20)
+# Output:
+# AttributeError: 'int' object has no attribute 'append'
+
+
+# 9. ModuleNotFoundError
+import mymodule
+# Output:
+# ModuleNotFoundError: No module named 'mymodule'
+
+
+# 10. EOFError
+name = input("Enter name: ")
+# Output (when no input is provided):
+# EOFError: EOF when reading a line
