@@ -1,0 +1,16 @@
+l=[1,29,30,567,95,98,34,967]
+print(l[0])
+print(l[1:5])
+print(l[:len(l)])
+print(l[0:])
+print(l[0:5:2])
+print(l[:-1])
+print(l[-5:-1])
+print(l[-9:])
+print(l[-9:-1:2])
+print(l[-9:-1:-1])
+print(l[0:5:-1])
+print(l[::-1])      
+print(l[6:1:-1])    
+print(l[-1:-6:-1])  
+print(l[5:0:-2])    #
