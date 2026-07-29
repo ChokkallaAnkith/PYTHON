@@ -1,25 +1,28 @@
-#CHECK WHETEHER THE PAYMENT IS DONE OR PENDING OR FAILED USING DECORATORS
 # Decorator
 def payment_status(func):
     def wrapper(status):
-        print("Checking payment status...")
-        func(status)
-        print("Status checked successfully.")
+        print("\n----- Payment Status -----")
+
+        if status.lower() in ["completed", "pending", "failed"]:
+            func(status)
+        else:
+            print("❌ Invalid Payment Status")
+
+        print("--------------------------")
+
     return wrapper
 
 
 @payment_status
 def check_payment(status):
     if status.lower() == "completed":
-        print("✅ Payment Completed")
+        print("✅ Payment Completed Successfully.")
     elif status.lower() == "pending":
-        print("⏳ Payment Pending")
+        print("⏳ Payment is Pending.")
     elif status.lower() == "failed":
-        print("❌ Payment Failed")
-    else:
-        print("⚠ Invalid Payment Status")
+        print("❌ Payment Failed.")
 
 
-# User Input
-status = input("Enter payment status (Completed/Pending/Failed): ")
+# Main Program
+status = input("Enter Payment Status (Completed/Pending/Failed): ")
 check_payment(status)
